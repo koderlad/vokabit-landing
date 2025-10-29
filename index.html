@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: "nest" };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-brown": {
+                dark: "#281a0f",
+                medium: "#3a2618",
+                light: "#4c3524",
+              },
+              "brand-orange": "#e59662",
+              "brand-offwhite": "#f3f4f6",
+              "dark-section": "#260B01",
+              "brand-text": {
+                light: "#d1d5db",
+                dark: "#9ca3af",
+              },
+            },
+            fontFamily: {
+              mon: ["Montserrat", "sans-serif"],
+              qui: ["Quicksand", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-brown-dark font-qui text-brand-text-light antialiased">
+    <div id="landing-page-wrapper">
+      <header id="header" class="bg-brand-brown-dark py-6">
+        <div class="container mx-auto px-8 flex justify-between items-center">
+          <div id="logo" class="text-2xl w-32 font-bold text-white">
+            <a href="#">
+              <img
+                src="assets/image/logo-light.png"
+                alt="Vokab It"
+                class="w-full"
+              />
+            </a>
+          </div>
+          <nav id="navigation" class="hidden md:flex items-center space-x-8">
+            <!-- <a href="#" class="hover:text-white transition-colors">Features</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >How It Works</a
+            > -->
+            <a
+              href="#cta"
+              id="header-cta-button"
+              class="bg-brand-orange text-brand-brown-dark font-semibold px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+            >
+              Join the Wait List
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="hero" class="py-24 h-[44rem] flex items-center">
+          <div
+            class="container mx-auto px-8 grid md:grid-cols-2 gap-16 items-center"
+          >
+            <div id="hero-content" class="flex flex-col gap-8">
+              <h1
+                class="font-mon text-6xl md:text-7xl font-extrabold text-white leading-tight"
+              >
+                Expand Your
+                <span class="text-brand-orange">Vocabulary</span>
+                While You Browse
+              </h1>
+              <p class="text-lg text-brand-text-light max-w-lg">
+                Transform every web page into a learning opportunity. Save
+                words, discover meanings, and master vocabulary effortlessly
+                with our smart browser extension.
+              </p>
+              <div
+                id="hero-form-card"
+                class="bg-white p-4 rounded-xl max-w-md shadow-lg"
+              >
+                <iframe
+                  data-tally-src="https://tally.so/embed/wMk6Dl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+                  loading="lazy"
+                  width="100%"
+                  height="200"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                  title="Sign Up"
+                ></iframe>
+                <script>
+                  var d = document,
+                    w = "https://tally.so/widgets/embed.js",
+                    v = function () {
+                      "undefined" != typeof Tally
+                        ? Tally.loadEmbeds()
+                        : d
+                            .querySelectorAll(
+                              "iframe[data-tally-src]:not([src])"
+                            )
+                            .forEach(function (e) {
+                              e.src = e.dataset.tallySrc;
+                            });
+                    };
+                  if ("undefined" != typeof Tally) v();
+                  else if (d.querySelector('script[src="' + w + '"]') == null) {
+                    var s = d.createElement("script");
+                    (s.src = w),
+                      (s.onload = v),
+                      (s.onerror = v),
+                      d.body.appendChild(s);
+                  }
+                </script>
+                <!-- <form class="flex items-center">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address..."
+                    class="w-full text-gray-700 placeholder-gray-400 border-none focus:ring-0 bg-transparent"
+                  />
+                  <button
+                    type="submit"
+                    class="bg-brand-orange text-brand-brown-dark font-semibold px-6 py-3 rounded-lg flex-shrink-0 hover:bg-opacity-90 transition-colors"
+                  >
+                    Join the Wait List
+                  </button>
+                </form> -->
+              </div>
+              <p class="text-sm text-brand-text-dark">
+                Get Free Early Access. No Credit Card Required.
+              </p>
+            </div>
+            <div
+              id="hero-image-container"
+              class="flex justify-center items-center"
+            >
+              <div class="rounded-2xl shadow-2xl w-full max-w-lg">
+                <img
+                  class="w-full h-auto object-contain rounded-lg"
+                  src="assets/image/vokab-image.png"
+                  alt="A clean, minimalist UI of a vocabulary browser extension popup. The popup has a dark grey header with three dots (red, yellow, green) and shows the definition of a word. A smaller, lighter grey tooltip is attached to it, defining the word"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="py-24 bg-dark-section">
+          <div class="container mx-auto px-8 text-center">
+            <h2
+              class="font-mon text-4xl md:text-5xl font-extrabold text-white mb-4"
+            >
+              <span class="text-brand-orange">Powerful Features</span> for
+              Effortless Learning
+            </h2>
+            <p class="text-lg text-brand-text-light max-w-3xl mx-auto mb-16">
+              Our intelligent browser extension seamlessly integrates into your
+              browsing experience, making vocabulary learning natural and
+              effortless.
+            </p>
+            <div
+              id="features-grid"
+              class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <div
+                id="feature-card-1"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-green-500 p-3 size-16 justify-center flex items-center rounded-lg"
+                >
+                  <i class="fa-solid fa-pencil text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  Smart Highlighting
+                </h3>
+                <p class="text-brand-text-light">
+                  Instantly highlight and save any word you encounter while
+                  browsing. Our smart system recognizes and provides relevant
+                  definitions.
+                </p>
+              </div>
+              <div
+                id="feature-card-2"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-blue-500 p-3 rounded-lg size-16 justify-center flex items-center"
+                >
+                  <i class="fa-solid fa-brain text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  AI Powered Definitions
+                </h3>
+                <p class="text-brand-text-light">
+                  Get contextual meanings and usage examples powered by advanced
+                  AI to understand words in their proper context.
+                </p>
+              </div>
+              <div
+                id="feature-card-3"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-purple-500 p-3 rounded-lg size-16 justify-center flex items-center"
+                >
+                  <i class="fa-solid fa-layer-group text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  Difficulty Levels
+                </h3>
+                <p class="text-brand-text-light">
+                  Practice with sentences at different difficulty levels - from
+                  beginner to advanced - tailored to your learning pace.
+                </p>
+              </div>
+              <div
+                id="feature-card-4"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-orange-500 p-3 rounded-lg size-16 justify-center flex items-center"
+                >
+                  <i class="fa-solid fa-book-open text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  Personal Library
+                </h3>
+                <p class="text-brand-text-light">
+                  Build your personal vocabulary library with saved words,
+                  definitions, and progress tracking across all your devices.
+                </p>
+              </div>
+              <div
+                id="feature-card-5"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-red-500 p-3 rounded-lg size-16 justify-center flex items-center"
+                >
+                  <i class="fa-solid fa-arrows-spin text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  Adapted Learning
+                </h3>
+                <p class="text-brand-text-light">
+                  Generate sentences at different difficulty levels to match
+                  your learning pace. From beginner to advanced, we got you
+                  covered.
+                </p>
+              </div>
+              <div
+                id="feature-card-6"
+                class="bg-brand-brown-medium p-8 rounded-2xl text-left flex flex-col items-start gap-4"
+              >
+                <div
+                  class="bg-teal-500 p-3 rounded-lg size-16 justify-center flex items-center"
+                >
+                  <i
+                    class="fa-solid fa-mobile-screen-button text-white text-xl"
+                  ></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white">
+                  Cross Device Sync
+                </h3>
+                <p class="text-brand-text-light">
+                  Access your vocabulary collection seamlessly across all
+                  devices. Your learning progress always available on-demand.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="py-24">
+          <div class="container mx-auto px-8 text-center">
+            <h2
+              class="font-mon text-4xl md:text-5xl font-extrabold text-white mb-4"
+            >
+              How <span class="text-brand-orange">Vokab It</span> Works
+            </h2>
+            <p class="text-lg text-brand-text-light max-w-3xl mx-auto mb-16">
+              Three simple steps to transform your browsing into a vocabulary
+              learning experience.
+            </p>
+            <div
+              id="how-it-works-steps"
+              class="grid md:grid-cols-3 gap-12 mb-16"
+            >
+              <div id="step-1" class="flex flex-col items-center gap-4">
+                <div
+                  class="bg-green-500 w-24 h-24 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fa-solid fa-hand-pointer text-white text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white">
+                  1. Highlight & Save
+                </h3>
+                <p class="text-brand-text-light">
+                  Simply highlight any word while browsing and instantly save it
+                  to your personal vocabulary collection with one click.
+                </p>
+              </div>
+              <div id="step-2" class="flex flex-col items-center gap-4">
+                <div
+                  class="bg-yellow-500 w-24 h-24 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fa-solid fa-lightbulb text-white text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white">
+                  2. Discover Meaning
+                </h3>
+                <p class="text-brand-text-light">
+                  Get instant definitions, pronunciation guides, synonyms, and
+                  contextual examples powered by our advanced AI engine.
+                </p>
+              </div>
+              <div id="step-3" class="flex flex-col items-center gap-4">
+                <div
+                  class="bg-purple-500 w-24 h-24 rounded-full flex items-center justify-center mb-4"
+                >
+                  <i class="fa-solid fa-trophy text-white text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold text-white">
+                  3. Practice & Master
+                </h3>
+                <p class="text-brand-text-light">
+                  Reinforce your learning with personalized exercises, quizzes,
+                  and sentence generation at different difficulty levels.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#cta"
+              class="bg-brand-orange text-brand-brown-dark font-semibold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
+            >
+              Join the Wait List
+            </a>
+          </div>
+        </section>
+
+        <section id="faq" class="py-24 bg-dark-section">
+          <div class="container mx-auto px-8 max-w-4xl">
+            <div class="text-center mb-16">
+              <h2
+                class="font-mon text-4xl md:text-5xl font-extrabold text-white mb-4"
+              >
+                Frequently Asked Questions
+              </h2>
+              <p class="text-lg text-brand-text-light">
+                Have questions? We've got answers. If you need more help, feel
+                free to contact us.
+              </p>
+            </div>
+            <div id="faq-accordion" class="space-y-4">
+              <div id="faq-item-1" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  Is Vokab It completely free?
+                </h3>
+                <p class="text-brand-text-light">
+                  Yes! The core features of Vokab It are, and will always be,
+                  completely free. We may introduce premium features in the
+                  future, but the essential vocabulary-building experience is
+                  for everyone.
+                </p>
+              </div>
+              <div id="faq-item-2" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  Which browsers are supported?
+                </h3>
+                <p class="text-brand-text-light">
+                  Currently, Vokab It is available for Google Chrome. We are
+                  actively working on versions for Firefox, Safari, and Edge.
+                  Sign up to be notified when they are released!
+                </p>
+              </div>
+              <div id="faq-item-3" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  Does Vokab It collect my browsing data?
+                </h3>
+                <p class="text-brand-text-light">
+                  No. Your privacy is our top priority. The extension only
+                  requires permission to detect and highlight words on the pages
+                  you visit. We do not track your browsing history or collect
+                  any personal data.
+                </p>
+              </div>
+              <div id="faq-item-4" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  How many words can I save?
+                </h3>
+                <p class="text-brand-text-light">
+                  You can save an unlimited number of words to your personal
+                  dictionary. Build your vocabulary without any limits!
+                </p>
+              </div>
+              <div id="faq-item-5" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  Can I sync my vocabulary across devices?
+                </h3>
+                <p class="text-brand-text-light">
+                  Absolutely! When you create a Vokab It account, your
+                  vocabulary automatically syncs across all your devices. You
+                  can save a word on your laptop and see it highlighted on your
+                  phone's browser.
+                </p>
+              </div>
+              <div id="faq-item-6" class="bg-brand-brown-medium rounded-xl p-6">
+                <h3 class="font-semibold text-white text-lg mb-2">
+                  How accurate are the AI Generated sentences?
+                </h3>
+                <p class="text-brand-text-light">
+                  Our AI generates contextually appropriate sentences with high
+                  accuracy. The system is trained on extensive literature and
+                  continuously improved based on user feedback. Each sentence is
+                  designed to help you understand proper word usage in
+                  real-world contexts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="cta" class="py-24">
+          <div class="container mx-auto px-8 text-center max-w-3xl">
+            <h2
+              class="font-mon text-4xl md:text-5xl font-extrabold text-white mb-4"
+            >
+              Ready to <span class="text-brand-orange">Transform</span> Your
+              Vocabulary
+            </h2>
+            <p class="text-lg text-brand-text-light mb-12">
+              Join thousands of learners who have already discovered the power
+              of intelligent vocabulary enhancement. Start your journey today
+              with our free browser extension and experience the difference
+              contextual learning can make.
+            </p>
+            <div
+              id="cta-form-card"
+              class="bg-white p-8 rounded-2xl max-w-lg mx-auto shadow-lg text-center"
+            >
+              <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                Get Early Access
+              </h3>
+              <iframe
+                data-tally-src="https://tally.so/embed/wMk6Dl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+                loading="lazy"
+                width="100%"
+                height="200"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Sign Up"
+              ></iframe>
+              <script>
+                var d = document,
+                  w = "https://tally.so/widgets/embed.js",
+                  v = function () {
+                    "undefined" != typeof Tally
+                      ? Tally.loadEmbeds()
+                      : d
+                          .querySelectorAll("iframe[data-tally-src]:not([src])")
+                          .forEach(function (e) {
+                            e.src = e.dataset.tallySrc;
+                          });
+                  };
+                if ("undefined" != typeof Tally) v();
+                else if (d.querySelector('script[src="' + w + '"]') == null) {
+                  var s = d.createElement("script");
+                  (s.src = w),
+                    (s.onload = v),
+                    (s.onerror = v),
+                    d.body.appendChild(s);
+                }
+              </script>
+              <!-- <form class="flex flex-col gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email address..."
+                  class="w-full text-gray-700 placeholder-gray-400 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+                />
+                <button
+                  type="submit"
+                  class="bg-brand-orange text-brand-brown-dark font-semibold w-full py-3 rounded-lg hover:bg-opacity-90 transition-colors"
+                >
+                  Join the Wait List
+                </button>
+              </form> -->
+              <p class="text-xs text-gray-500 mt-4">
+                We respect your privacy. Unsubscribe at any time. No spam, ever.
+                Just valuable vocabulary learning insights and updates.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer" class="py-8 border-t border-brand-brown-light">
+        <div
+          class="container mx-auto px-8 flex justify-between items-center text-sm text-brand-text-dark"
+        >
+          <p>&copy; Copyright 2025 Vokab It. All Rights Reserved.</p>
+          <p>
+            Made with <i class="fa-solid fa-heart text-red-500"></i> for
+            learners worldwide.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
